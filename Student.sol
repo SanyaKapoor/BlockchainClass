@@ -12,7 +12,7 @@ contract Student {
     mapping (address => stu) students;
     address[] public studentsAccts;
     
-    function setInstructor(string memory name, string memory gender, int number, int year, address Number ) public {
+    function setStudent(string memory name, string memory gender, int number, int year, address Number ) public {
         stu memory student = students[Number];
         student.name = name;
         student.gender = gender;
