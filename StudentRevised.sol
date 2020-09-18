@@ -33,7 +33,7 @@ function getStudent(int number) public view returns( string memory, string memor
 	return("Not Found", "Not Found", 0); 
 }
 
-function editStudentName(int number, string memory name) public 
+function editStudentName(int number, string memory name) public
 { 
 	uint i; 
 	for(i=0;i<students.length;i++) 
@@ -42,11 +42,12 @@ function editStudentName(int number, string memory name) public
 		if(s.number==number) 
 		{ 
 				s.name = name; 
+				students[i] = s;
 		} 
 	} 
 }
 
-function editStudentGender(int number, string memory gender) public 
+function editStudentGender(int number, string memory gender) public
 { 
 	uint i; 
 	for(i=0;i<students.length;i++) 
@@ -54,11 +55,12 @@ function editStudentGender(int number, string memory gender) public
 		Student memory s=students[i]; 
 		if(s.number==number) 
 		{ 
-				s.gender = gender; 
+				s.gender = gender;
+				students[i] = s;
 		} 
 	} 
 }
-function editStudentYear(int number, int year) public 
+function editStudentYear(int number, int year) public
 { 
 	uint i; 
 	for(i=0;i<students.length;i++) 
@@ -67,6 +69,7 @@ function editStudentYear(int number, int year) public
 		if(s.number==number) 
 		{ 
 				s.year = year; 
+				students[i] = s;
 		} 
 	} 
 }
