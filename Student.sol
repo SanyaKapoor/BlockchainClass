@@ -7,6 +7,7 @@ contract Student {
         int number;
         string gender;
         int year;
+        int rand;
     }
     
     mapping (address => stu) students;
