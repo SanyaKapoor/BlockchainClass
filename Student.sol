@@ -19,6 +19,7 @@ contract Student {
         student.year = year;
         student.number = number;
         studentsAccts.push(Number) -1;
+        //add a comment
     }
     
     function getStudent(address Number) view public returns (string memory, string memory, int, int) {
